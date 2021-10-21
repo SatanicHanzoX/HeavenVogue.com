@@ -1,6 +1,12 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 a,
@@ -18,17 +24,31 @@ a:active {
   padding-top: 3px;
 }
 
-img {
-  width: 250px;
+.logobox {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 250px;
+  height: 67px;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: cover;
+  }
 }
 
 .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.yiis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bi {
@@ -39,21 +59,7 @@ ul {
   margin: 0px;
 }
 
-@media screen and (max-width: 560px) {
-  .navcontainer {
-    margin: 0 20px 0 20px;
-  }
-  ul {
-    padding: 0px;
-  }
-  img {
-    width: 170px;
-  }
-  .bi {
-    margin: 0 10px 0 10px;
-    width: 20px;
-  }
-}
+
 
 .ad {
   padding: 0.8rem;
@@ -65,218 +71,321 @@ ul {
   font-size: 17px;
 }
 
-.maincontainer {
-  display: grid;
-  grid-template-columns: 11% 1.6fr 10% 3fr 10%;
-  grid-template-rows: 10% 1fr 1.5fr 0.5fr 15%;
-}
-
-.Title {
-  font-family: "Roboto", sans-serif;
-  font-style: bold;
-  font-weight: 800;
-  font-size: 60px;
-  grid-row: 2/3;
-  grid-column: 2/3;
-}
-
-.desc {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-
-  font-size: 30px;
-  grid-row: 3/4;
-
-  grid-column: 2/3;
-}
-
-.offer {
-    margin-top: 40px;
-    margin-bottom: 50px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: bold;
-  font-size: 30px;
-  grid-row: 4/5;
-  grid-column: 2/3;
-}
-
-.buybuton {
-    font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: bold;
-  font-size: 20px;
-    color: white;
-    background: black;
-  grid-row: 5/6;
-  grid-column: 2/3;
-  height: 68%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-
-  border: 0px;
-}
-
-
-
-.buybuton:hover {
-    transform:scale(1.02);
-    transition: all 0.5s ease-in-out;
-    
-}
-
-.fashion {
-    position: relative;
-  grid-row-start: 2;
-  grid-row-end: 5;
-  grid-column-start: 4;
-  grid-column-end: 5;
-  content: cover;
-}
-
-@media screen and (max-width: 900px) {
-  
-    .buybuton {
-      height: 8%;
-      padding: 0px;
-      grid-row: 7/8;
-      grid-column: 2/3;
-      margin: 0px;
-    
-  
-    
-  }
-}
-
-
-
-@media screen and (max-width: 1200px) {
-
-  .maincontainer {
-      display: grid;
-      grid-template-columns: 11% 1.6fr 10%;
-      grid-template-rows: 10% 1fr 1.5fr 0.5fr 15% 40% 3fr 3fr;
-    }
-
-  .fashion {
-    grid-row-start: 5;
-    grid-row-end: 7;
-    grid-column-start: 2;
-    grid-column-end: 3;}
-
-    .buybuton {
-      height: 10%;
-        padding: 30px;
-      grid-row: 7/8;
-      grid-column: 2/3;
-      margin: 0px;
-      margin-bottom: px;
-  
-    }
-    .navcontainerbottom {
-      display: flex;
-      flex-direction: column;
-      padding:5px;
-      background: black;
-      
-    }
-}
-
-@media screen and (max-width: 900px) {
-
-    .maincontainer {
-        display: grid;
-        grid-template-columns: 11% 1.6fr 10%;
-        grid-template-rows: 10% 1fr 1.5fr 0.5fr 15% 30% 1fr 2fr;
-      }
-
-    .fashion {
-      grid-row-start: 5;
-      grid-row-end: 7;
-      grid-column-start: 2;
-      grid-column-end: 3;}
-
-      .buybuton {
-          padding: 30px;
-        grid-row: 7/8;
-        grid-column: 2/3;
-        margin: 0px;
-    
-      }
-}
-
-@media screen and (max-width: 750px) {
-
-    .maincontainer {
-        display: grid;
-        grid-template-columns: 11% 1.6fr 10%;
-        grid-template-rows: 10% 1fr 1.5fr 0.5fr 15% 20% 1fr 2fr;
-      }
-    }
-
-
 .LogoBottom {
-    color: white;
-    font-family: "Roboto", sans-serif;
+  color: white;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-style: bold;
-
 }
 
 .navcontainerbottom {
+  display: flex;
+  flex-direction: column;
+  background: black;
+  
+}
+
+.navigationbottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10% 0 11%;
+}
+
+@media screen and (max-width: 1200px) {
+  .maincontainer {
+    display: grid;
+    grid-template-columns: 11% 0.5fr 10%;
+    grid-template-rows: 5% 1fr 1.5fr 0.5fr 15% 3fr 1fr;
+  }
+
+
+  .buybuton {
+    grid-row: 7/8;
+    grid-column: 2/3;
+    margin: 0px;
+  }
+  .navcontainerbottom {
     display: flex;
     flex-direction: column;
-    padding:5px;
+    justify-content: flex-end;
+    padding: 0px;
     background: black;
-    margin-top: 5.2%;
   }
-  
-  
+
   .navigationbottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 10% 0 11%;
+    margin: 0 10% 0 12%;
+  }
+}
+
+
+
+  .maincontainer {
+    display: grid;
+    grid-template-columns: 11% 0.6fr 10% 1fr 11%;
+    grid-template-rows: 15% 2fr 3fr 2fr 2.53fr 15%;
   }
 
-  h5 {
-    text-decoration: line-through;
-    margin-top: 40px;
-    margin-bottom: 50px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  .Title {
+    margin-top: 100px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
   font-style: bold;
-  font-size: 30px;
-  grid-row: 4/5;
-  grid-column: 2/3;
-margin-left: 280px;  
+  font-size: 60px;
+    grid-column: 2/3;
+    grid-row:2/3;
+  }
+
+  .desc {
+    height:100%;
+    display: flex;
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    grid-column: 2/3;
+    grid-row:3/4;
+    margin-top: 60px;
+  }
+
+  .offer {
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    margin-top: 40px;
+    grid-column: 2/3;
+    grid-row:4/5;
+    justify-content: space-between;
   }
 
   .offer2 {
-    margin-top: 40px;
-    margin-bottom: 50px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-style: bold;
-  font-size: 30px;
-  grid-row: 4/5;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px;
+    grid-column: 2/3;
+    grid-row:4/5;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+  }
+
+ .linethough {
+  display: flex;
+  justify-content: flex-end;
+   text-decoration: line-through;
+   grid-column: 2/3;
+    grid-row:4/5;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    margin: 0;
+    margin-right: 10px;
+   
+ }
+
+ .buybuton {
+   
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: flex-end;
   grid-column: 2/3;
-margin-left: 400px;  
+  grid-row:5/6;
+
+  button {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 19px;
+    font-weight: 550;
+  }
+ }
+
+ .fashion {
+   
+   grid-column: 4/5;
+  grid-row:2/6;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  
+   
+
+   img {
+     max-width: 100%;
+     max-height: 100%;
+   }
+ }
+
+
+ .price {
+   display: flex;
+ }
+
+ @media screen and (max-width: 1200px) {
+
+  .maincontainer {
+    display: grid;
+    grid-template-columns: 11% 1fr 11%;
+    grid-template-rows: 15% 2fr 3fr 2fr 2.53fr 15%;
+  }
+  
+}
+
+@media screen and (max-width: 650px) {
+  .desc {
+    font-size: 25px;
+  }
+}
+
+
+
+@media screen and (max-width: 550px) {
+
+  .maincontainer {
+    display: grid;
+    grid-template-columns: 5% 1fr 5%;
+    grid-template-rows: 10% 1fr 1fr 1fr 1fr 15% 1fr;
   }
 
+  .offer {
+    font-size: 20px;
+  }
 
-  @media screen and (max-width: 550px) {
-      h5 {
-          font-size:20px;
-          margin-left: 200px;
-      }
-      .offer2 {
-          font-size: 20px;
-          margin-left: 300px;
-      }
-    .offer {
-        font-size: 20px;
+  .offer2 {
+    font-size: 20px;
+  }
+
+  .linethough {
+    font-size: 20px;
+  }
+  
+    .yiis {
+      padding: 0px;
     }
+  
+    .navcontainer {
+      margin: 0 5% 0 5%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 3px;
+  
+      svg {
+        margin: 0px;
+        margin-left: 20px;
+      }
+    }
+  
+  
+    .yiisbottom {
+      padding: 0px;
+  
+      
+    }
+    .navigationbottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 5% 0 10%;
+  
+      svg {
+          margin:0 5px 0px 5px;
+      }
+  
+    }
+  
+  
+     
+    
   }
+
+  @media screen and (max-width: 300px) {
+      .LogoBottom {
+          font-size: 90%;
+      }
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    .maincontainer {
+      display: grid;
+      grid-template-columns: 11% 1fr 11%;
+      grid-template-rows: 15% 0.5fr 0.5fr 0.5fr 0.5fr 15% 1fr;
+    }
+    
+    .fashion {
+   
+      grid-column: 2/3;
+     grid-row:5/6;
+     width: 100%;
+     align-items: center;
+     justify-content: center;
+     
+      
+   
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .buybuton {
+   
+     
+      grid-column: 2/3;
+      grid-row:6/7;
+    
+      
+     }
+
+  }
+
+  @media screen and (max-width: 450px) {
+    .Title {
+      margin-top: 100px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+  font-style: bold;
+  font-size: 50px;
+    
+    }
+
+    .desc {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+
+    .maincontainer {
+      display: grid;
+      grid-template-columns: 10% 1fr 7%;
+      grid-template-rows: 10% 0.5fr 0.8fr 0.5fr 1fr 15% 0.5fr;
+    }
+
+    .offer {
+      font-size: 20px;
+    }
+
+    .offer2 {
+      font-size: 20px;
+    }
+
+    .linethough {
+      font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+  .offer {
+    font-size: 15px;
+  }
+
+  .offer2 {
+    font-size: 15px;
+  }
+
+  .linethough {
+    font-size: 15px;
+  }
+}
